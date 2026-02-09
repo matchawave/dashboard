@@ -35,5 +35,8 @@
 		"stage": "yarn run build && wrangler deploy -e staging",
 		"cf-typegen": "wrangler types ./src/worker-configuration.d.ts"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"sass-embedded": "^1.97.2"
+	}
 }

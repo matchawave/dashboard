@@ -16,7 +16,24 @@
 
 <main class="flex flex-col items-center justify-center h-screen">
   <form method="GET" action="{apiHost}/api/auth/login">
-    <Button type="submit">Login to Discord</Button>
+    <button class="primary btn" type="submit">Login to Discord</button>
   </form>
   <a href="/dashboard">Dashboard</a>
 </main>
+
+<style lang="scss">
+  main {
+    gap: 1.5rem;
+    button {
+      padding: 0.75rem 1.5rem;
+      transition: transform 0.2s ease-in-out;
+
+      &:hover {
+        transform: translateY(-0.25rem);
+      }
+      &:active {
+        transform: translateY(-0.1225rem);
+      }
+    }
+  }
+</style>

@@ -1,8 +1,10 @@
 export class SocketManager {
-  private socket: WebSocket | null = null;
-  private host: string = "";
-  private id: string = "";
-  readonly listeners: Map<string, Array<(data: any) => void>> = new Map();
+  private socket = $state<WebSocket | null>(null);
+  private host = $state<string>("ws://localhost:3000");
+  private id = $state<string>("");
+  readonly listeners = $state<Map<string, Array<(data: any) => void>>>(
+    new Map()
+  );
 
   setHost(host: string): void {
     let url = host;

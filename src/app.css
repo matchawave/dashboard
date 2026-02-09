@@ -7,27 +7,36 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-primary-50: #fff5f2;
-  --color-primary-100: #fff1ee;
-  --color-primary-200: #ffe4de;
-  --color-primary-300: #ffd5cc;
-  --color-primary-400: #ffbcad;
-  --color-primary-500: #fe795d;
-  --color-primary-600: #ef562f;
-  --color-primary-700: #eb4f27;
-  --color-primary-800: #cc4522;
-  --color-primary-900: #a5371b;
+  --color-secondary-50: oklch(98.5% 0.002 247.839);
+  --color-secondary-100: oklch(96.7% 0.003 264.542);
+  --color-secondary-200: oklch(92.8% 0.006 264.531);
+  --color-secondary-300: oklch(87.2% 0.01 258.338);
+  --color-secondary-400: oklch(70.7% 0.022 261.325);
+  --color-secondary-500: oklch(55.1% 0.027 264.364);
+  --color-secondary-600: oklch(44.6% 0.03 256.802);
+  --color-secondary-700: oklch(37.3% 0.034 259.733);
+  --color-secondary-800: oklch(27.8% 0.033 256.848);
+  --color-secondary-900: oklch(21% 0.034 264.665);
+  --color-secondary-950: oklch(13% 0.028 261.692);
 
-  --color-secondary-50: #f0f9ff;
-  --color-secondary-100: #e0f2fe;
-  --color-secondary-200: #bae6fd;
-  --color-secondary-300: #7dd3fc;
-  --color-secondary-400: #38bdf8;
-  --color-secondary-500: #0ea5e9;
-  --color-secondary-600: #0284c7;
-  --color-secondary-700: #0369a1;
-  --color-secondary-800: #075985;
-  --color-secondary-900: #0c4a6e;
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+}
+
+* {
+  --transtion-timing: 0.15s ease-in-out;
+  transition:
+    background-color var(--transtion-timing),
+    color var(--transtion-timing),
+    border-color var(--transtion-timing);
 }
 
 @source "../node_modules/flowbite-svelte/dist";

@@ -9,7 +9,7 @@
   const apiHost = $derived<string>(data.apiHost);
 
   onMount(async () => {
-    userState.discord = await fetchUser();
+    userState.user = await fetchUser();
     guildsState.push(...((await fetchGuilds()) ?? []));
   });
 
@@ -45,6 +45,6 @@
   }
 </script>
 
-{#if userState.discord}
+{#if userState}
   {@render children()}
 {/if}
